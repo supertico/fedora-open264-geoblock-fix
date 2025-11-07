@@ -215,7 +215,7 @@ if [ "$GPU_VENDOR" = "Intel" ]; then
     fi
 elif [ "$GPU_VENDOR" = "AMD" ]; then
     if [[ "$IS_ATOMIC" == true ]]; then
-        CMD="rrpm-ostree install -y libva-mesa-driver && rpm-ostree override replace -y mesa-va-drivers mesa-va-drivers-freeworld && rpm-ostree override replace -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld"
+        CMD="rpm-ostree install -y libva-mesa-driver && rpm-ostree override replace -y mesa-va-drivers mesa-va-drivers-freeworld && rpm-ostree override replace -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld"
     else
         CMD="sudo dnf install -y libva-mesa-driver -y && sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld -y && sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld -y"
     fi
