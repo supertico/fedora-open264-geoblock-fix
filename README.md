@@ -98,7 +98,9 @@ Forums are flooded with complaints from users who have to learn how to solve thi
 
 ##### Error 2: Cannot download metadata (repomd.xml)
 ​This happens when DNF cannot even connect to the Cisco repository:
+
 Errors during downloading metadata for repository 'fedora-cisco-openh264'
+
 Error: Failed to download metadata for repo 'fedora-cisco-openh264'
 
 ##### Error 3: Flatpak error, process finishes but updates are not installed due to openh264
@@ -108,6 +110,7 @@ Error: Failed to download metadata for repo 'fedora-cisco-openh264'
 
 ##### Error 4: System upgrade to the next version F41 → F42, F42 → F43 hangs
 ​When upgrading Fedora, OpenH264 also tries to upgrade, which can lead to hanging:
+
 Error: Unable to download packages for fedora-upgrade
 
 ##### Error 5: Content-Length mismatch message

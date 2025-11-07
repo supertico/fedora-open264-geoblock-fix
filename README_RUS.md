@@ -64,10 +64,15 @@ sudo ./fedora-cisco-403-mitigation.sh
 * Fedora приняла это предложение и добавила репозиторий fedora-cisco-openh264, который автоматически загружает кодек с серверов Cisco.
 
 ⚠️ В 2024-2025 годах **Cisco начала блокировать доступ к своим серверам для некоторых регионов**. В результате, у пользователей в заблокированных регионах:
+
     ❌ Репозиторий Cisco недоступен (ошибка 403 Forbidden)
+    
     ❌ DNF не может загрузить openh264
+    
     ❌ Вся цепочка обновлений системы блокируется
+    
     ❌ Flatpak приложения не устанавливаются/обновляются
+    
 
 Форумы переполнены жалобами пользователей, которым приходится изучать, как решать эту технически сложную проблему, поскольку блокируется не только обновление системы, но и установка приложений. 
 
@@ -82,15 +87,21 @@ sudo ./fedora-cisco-403-mitigation.sh
 
 ##### Ошибка 1: Status code 403 Forbidden (самая распространённая)
 ​Это основная ошибка геоблокировки в заблокированных странах:
+
     DNF пытается загрузить mozilla-openh264 с ciscobinary.openh264.org
+    
     Сервер возвращает 403 Forbidden (доступ запрещён)
+    
     DNF не может продолжить обновление и останавливает всю операцию.
+    
 
 ![](images/fedora_update_err1.png)
 
 ##### Ошибка 2: Cannot download metadata (repomd.xml)
 ​Это происходит, когда DNF не может даже подключиться к репозиторию Cisco:
+
 Errors during downloading metadata for repository 'fedora-cisco-openh264'
+
 Error: Failed to download metadata for repo 'fedora-cisco-openh264'
 
 ##### Ошибка 3: Ошибка Flatpak, из-за openh264 процесс завершается но обновления не устанавливаются
@@ -100,6 +111,7 @@ Error: Failed to download metadata for repo 'fedora-cisco-openh264'
 
 ##### Ошибка 4: Обновление системы до следующей версии F41 → F42, F42 → F43 зависает
 ​При обновлении версии Fedora обновляется и OpenH264, что может привести к зависанию:
+
 Error: Unable to download packages for fedora-upgrade
 
 ##### Ошибка 5: Сообщение Content-Length mismatch
