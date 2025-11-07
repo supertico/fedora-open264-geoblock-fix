@@ -1,7 +1,7 @@
 # Fedora Cisco 403 mitigation script: restoring updates after Cisco openH264 blocking + installing multimedia codecs for Fedora (dnf) / Fedora Atomic (ostree)
 
 * Current version: 1.00 (November 7, 2025), by Andrei Manzhov
-* Language: Russian/English depending on system locale
+* Language: [Russian](README_RUS.md)/English depending on system locale
 * Idempotent: Yes (can be rerun multiple times to complete failed steps)
 * Automatic system configuration implemented, taking into account features of different Fedora versions, and error handling.
 * Supported Fedora versions:
@@ -13,12 +13,16 @@
 ## Installation and Usage
 ##### Quick download and run without saving:
 Copy and execute in terminal:
-curl -sSL https://raw.githubusercontent.com/supertico/fedora-open264-geoblock-fix/main/fedora-cisco-403-mitigation.sh | sudo bash
+```bash
+curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/fedora-cisco-403-mitigation.sh | sudo bash
+```
 
 ##### Download, save, and run manually:
-curl -sSL https://raw.githubusercontent.com/supertico/fedora-open264-geoblock-fix/main/fedora-cisco-403-mitigation.sh -o fedora-cisco-403-mitigation.sh
+```bash
+curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/fedora-cisco-403-mitigation.sh -o fedora-cisco-403-mitigation.sh
 chmod +x fedora-cisco-403-mitigation.sh
 sudo ./fedora-cisco-403-mitigation.sh
+```
 
 ## Provides full support for video codecs with hardware acceleration, eliminating dependence on Cisco
 Why was this script written?
@@ -112,8 +116,8 @@ Use utilities:
 * vdpauinfo
 
 ## Links to discussions on the topic:
-* Cisco openh264 geo-blocking https://discussion.fedoraproject.org/t/ciscobinary-openh264-org-is-unreachable-in-some-countries-ru-ua-ir/161434
-* Discussion on why H.264 is not included in Fedora by default https://discussion.fedoraproject.org/t/h-264-support-in-fedora-workstation-by-default/114521
-* Discussion on differences between H.264 and ffmpeg from RPM Fusion and blocks: https://www.reddit.com/r/Fedora/comments/1n8oqp5/ciscos_bringing_the_circus_to_town_their_openh264/
+* [Cisco openh264 geo-blocking](https://discussion.fedoraproject.org/t/ciscobinary-openh264-org-is-unreachable-in-some-countries-ru-ua-ir/161434)
+* [Discussion on why H.264 is not included in Fedora by default](https://discussion.fedoraproject.org/t/h-264-support-in-fedora-workstation-by-default/114521)
+* [Discussion on differences between H.264 and ffmpeg from RPM Fusion and blocks](https://www.reddit.com/r/Fedora/comments/1n8oqp5/ciscos_bringing_the_circus_to_town_their_openh264/)
 
 (November 7, 2025)

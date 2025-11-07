@@ -1,7 +1,7 @@
 # Скрипт восстановления обновлений после блокировки Cisco openh264 и установки мультимедиа-кодеков для Fedora (dnf) / Fedora Atomic (ostree) 
 
 * Текущая версия: 1.00 (7 ноября 2025), Автор Андрей Маньжов
-* Русский/Английский язык в зависимости от system locale
+* Русский/[Английский](README.md) язык в зависимости от system locale
 * Идемпотентность: да (можно перезапускать многократно для завершения неудавшихся шагов)
 * Реализована автоматическая настройка системы с учётом особенностей различных версий Fedora, и обработка ошибок. 
 * Поддерживаются версии Fedora: 
@@ -13,12 +13,16 @@
 ## Установка и использование
 ##### быстрая загрузка и запуск без сохранения:
 Скопируйте и выполните в терминале:
-curl -sSL https://raw.githubusercontent.com/supertico/fedora-open264-geoblock-fix/main/fedora-cisco-403-mitigation.sh | sudo bash
+```bash
+curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/fedora-cisco-403-mitigation.sh | sudo bash
+```
 
 ##### загрузка, сохранение, и запуск вручную:
-curl -sSL https://raw.githubusercontent.com/supertico/fedora-open264-geoblock-fix/fedora-cisco-403-mitigation.sh -o fedora-cisco-403-mitigation.sh
+```bash
+curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/fedora-cisco-403-mitigation.sh -o fedora-cisco-403-mitigation.sh
 chmod +x fedora-cisco-403-mitigation.sh
 sudo ./fedora-cisco-403-mitigation.sh
+```
 
 ## Обеспечивает полноценную поддержку видеокодеков с аппаратным ускорением, устраняя зависимость от Cisco
 По какой причине пришлось написать этот скрипт?
@@ -112,8 +116,8 @@ Error: Unable to download packages for fedora-upgrade
 * vdpauinfo
 
 ## Ссылки на обсуждения по теме:
-* Cisco openh264 геоблокировка https://discussion.fedoraproject.org/t/ciscobinary-openh264-org-is-unreachable-in-some-countries-ru-ua-ir/161434
-* Обсуждение, почему H.264 не включён в Fedora по умолчанию https://discussion.fedoraproject.org/t/h-264-support-in-fedora-workstation-by-default/114521
-* Обсуждение различий между H.264 и ffmpeg из RPM Fusion и блокировок: https://www.reddit.com/r/Fedora/comments/1n8oqp5/ciscos_bringing_the_circus_to_town_their_openh264/
+* [Cisco openh264 геоблокировка](https://discussion.fedoraproject.org/t/ciscobinary-openh264-org-is-unreachable-in-some-countries-ru-ua-ir/161434)
+* [Обсуждение, почему H.264 не включён в Fedora по умолчанию](https://discussion.fedoraproject.org/t/h-264-support-in-fedora-workstation-by-default/114521)
+* [Обсуждение различий между H.264 и ffmpeg из RPM Fusion и блокировок](https://www.reddit.com/r/Fedora/comments/1n8oqp5/ciscos_bringing_the_circus_to_town_their_openh264/)
 
 (7 ноября 2025 г.)
