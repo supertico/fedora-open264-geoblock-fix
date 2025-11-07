@@ -64,9 +64,13 @@ Why was this script written?
 * Fedora accepted this offer and added the fedora-cisco-openh264 repository, which automatically downloads the codec from Cisco servers.
 
 ⚠️ In 2024-2025, **Cisco started blocking access to its servers for some regions**. As a result, users in blocked regions experience:
+
     ❌ Cisco repository inaccessible (403 Forbidden error)
+    
     ❌ DNF cannot download openh264
+    
     ❌ Entire system update chain is blocked
+    
     ❌ Flatpak applications cannot be installed/updated
 
 Forums are flooded with complaints from users who have to learn how to solve this technically complex problem, as not only system updates are blocked, but also application installations.
@@ -82,9 +86,13 @@ Forums are flooded with complaints from users who have to learn how to solve thi
 
 ##### Error 1: Status code 403 Forbidden (most common)
 ​This is the main geo-blocking error in blocked countries:
+
     DNF tries to download mozilla-openh264 from ciscobinary.openh264.org
+    
     Server returns 403 Forbidden (access denied)
+    
     DNF cannot continue updating and stops the entire operation.
+    
 
 ![](images/fedora_update_err1.png)
 
