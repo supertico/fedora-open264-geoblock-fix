@@ -14,12 +14,12 @@
 ##### Quick download and run without saving:
 Copy and execute in terminal:
 ```bash
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/fedora-cisco-403-mitigation.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/supertico/fedora-open264-geoblock-fix/main/fedora-cisco-403-mitigation.sh | sudo bash
 ```
 
 ##### Download, save, and run manually:
 ```bash
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/fedora-cisco-403-mitigation.sh -o fedora-cisco-403-mitigation.sh
+curl -sSL https://raw.githubusercontent.com/supertico/fedora-open264-geoblock-fix/main/fedora-cisco-403-mitigation.sh -o fedora-cisco-403-mitigation.sh
 chmod +x fedora-cisco-403-mitigation.sh
 sudo ./fedora-cisco-403-mitigation.sh
 ```

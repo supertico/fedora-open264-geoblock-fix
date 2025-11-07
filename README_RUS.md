@@ -14,12 +14,12 @@
 ##### быстрая загрузка и запуск без сохранения:
 Скопируйте и выполните в терминале:
 ```bash
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/fedora-cisco-403-mitigation.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/supertico/fedora-open264-geoblock-fix/main/fedora-cisco-403-mitigation.sh | sudo bash
 ```
 
 ##### загрузка, сохранение, и запуск вручную:
 ```bash
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/fedora-cisco-403-mitigation.sh -o fedora-cisco-403-mitigation.sh
+curl -sSL https://raw.githubusercontent.com/supertico/fedora-open264-geoblock-fix/main/fedora-cisco-403-mitigation.sh -o fedora-cisco-403-mitigation.sh
 chmod +x fedora-cisco-403-mitigation.sh
 sudo ./fedora-cisco-403-mitigation.sh
 ```
